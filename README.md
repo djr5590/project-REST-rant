@@ -1,17 +1,12 @@
 # Project REST-Rant
 
-# REST-RANT
-
-### SUMMARY
-
+## Summary
 
 REST RANT is an app where users can review restaurants
 
-
-
 ### User Stories & Wireframes
 
-As a standard user, I need these features
+As a standard user, I need these features:
 - Page navigation
 - Add new locations
 - Delete locations
@@ -21,12 +16,12 @@ As a standard user, I need these features
   - Add pictures
   - Leave a username or id, or remain anonymous
 
-In order to 
+In order to: 
 - Edit comments & reviews
 - Mark whether the comment is a rant or not
 - Track the comments and reviews
 
-## LANGUAGES AND TOOLS
+## Languages and Tools
 
 ```
 Express | Node.Js
