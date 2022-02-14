@@ -1,13 +1,15 @@
 require('dotenv').config()
+
 const express = require('express')
 const app = express()
 
+app.use('/places', require('./controllers/places'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-app.use('/places', require('./controllers/places'))
 
 app.get('/', (req,res) => {
+    console.log('testing')
     res.render('Home')
 })
 
