@@ -13,7 +13,7 @@ function index (data) {
             </div>
         )
     })
-        return (
+        return ( 
             <Def>
                 <main>
                     <h1>PLACES INDEX PAGE</h1> 
@@ -23,4 +23,4 @@ function index (data) {
         )
     }
 
-module.exports = index
+module.exports = index 
