@@ -1,6 +1,11 @@
 const express = require("express")
 const router = express.Router()
 
+//GET NEW PLACES
+router.get('/new', (req, res) => {
+    res.render('places/new')
+})
+
 // GET PLACES
 router.get("/", (req, res) => {
     let places = [
