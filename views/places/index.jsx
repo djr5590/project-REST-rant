@@ -8,12 +8,12 @@ function index (data) {
     let placesFormatted = data.places.map((place) => {
         return (
             <div className="col-sm-6" key={index}>
-                <h2>{place.name}</h2>
-                <p clasName="text-center">
+                <h2 className='text-center'>{place.name}</h2>
+                <p className="text-center">
                     {place.cuisines}
                 </p>
-                <img src={place.pic} alt={place.name}></img>
-                <p clasName='text-center'>
+                <center><img src={place.pic} alt={place.name}></img></center>
+                <p className='text-center'>
                     Located in {place.city}, {place.state}
                 </p>
             </div>
@@ -22,7 +22,12 @@ function index (data) {
         return ( 
             <Def>
                 <main>
-                    <h1>Places to Rant or Rave about!</h1> 
+                    <div>
+                        <a href="/">
+                            <button className="btn btn-primary">Home</button>
+                        </a>
+                        <h1>Places to Rant or Rave about!</h1> 
+                    </div>
                     <div className='row'>
                         {placesFormatted}
                     </div>

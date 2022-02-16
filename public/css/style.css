@@ -4,5 +4,12 @@ h1 {
 }
 
 img {
+    text-align: center;
     height: 300px;
+}
+
+.centerImage
+{
+    text-align: center;
+    display: block;
 }
