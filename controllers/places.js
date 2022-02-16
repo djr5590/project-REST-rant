@@ -6,6 +6,7 @@ router.get('/new', (req, res) => {
     res.render('places/new')
 })
 
+
 // GET PLACES
 router.get("/", (req, res) => {
     let places = [
@@ -24,10 +25,15 @@ router.get("/", (req, res) => {
             cuisines: "Coffee, Bakery",
             pic: '/images/coding-cat-cafe.jpg',
             // Photo by <a href="https://unsplash.com/@herlifeinpixels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannah Wei</a> on <a href="https://unsplash.com/s/photos/cat-cafe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+            
         },
     ]
     res.render("places/index", { places })
+})
+
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
 })
 
 module.exports = router
