@@ -12,15 +12,7 @@ function home () {
                     <div className='text-center'>
                         <sub>Photo by <a href="https://unsplash.com/@ellaolsson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ella Olsson</a> on <a href="https://unsplash.com/s/photos/free-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></sub>
                     </div>
-                </div>
-                <div className="col-sm-6">
-                    <a href="/places">
-                        <button className="btn btn-primary">Places Page</button>
-                    </a>                
-                    <a href="/places/new">
-                        <button className="btn btn-primary">Add a Place</button>
-                    </a>
-                </div>
+                </div>                
             </main>
         </Def>
     )

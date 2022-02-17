@@ -23,9 +23,6 @@ function index (data) {
             <Def>
                 <main>
                     <div>
-                        <a href="/">
-                            <button className="btn btn-primary">Home</button>
-                        </a>
                         <h1>Places to Rant or Rave about!</h1> 
                     </div>
                     <div className='row'>
