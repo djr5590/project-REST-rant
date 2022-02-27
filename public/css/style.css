@@ -3,10 +3,20 @@ h1 {
     color: cornflowerblue;
 }
 
+h2 {
+    text-align: center;
+    color: lightblue;
+}
+
 img {
     text-align: center;
     height: 300px;
 }
+
+p {
+    text-align: center;
+}
+
 
 nav {
     background-color: cornflowerblue;
@@ -43,3 +53,7 @@ main {
     margin-left: 20px;
     background-color: white;
 }
+
+/* img {
+
+} */
