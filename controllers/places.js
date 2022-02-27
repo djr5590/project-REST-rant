@@ -15,17 +15,15 @@ router.get('/', (req, res) => {
 })
 
 // Create
-router.post('/', async (req, res) => {
-    try {
-        if (!req.body.image) {
-            req.body.image = 'http://placekitten.com/400x400'
-        }
-        await Place.create(req.body)
+router.post('/', (req, res) => {
+    Place.create(req.body)
+    .then(() => {
         res.redirect('/places')
-    }
-    catch (error) {
-        res.send(error);
-    }
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 // New
