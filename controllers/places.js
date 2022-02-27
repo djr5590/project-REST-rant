@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const db = require('../models/places.js')
+const Place = require('../models/places.js')
 
 // Index
 router.get('/', (req, res) => {
-    db.Place.find()
+    Place.find()
         .then((places) => {
             res.render('places/index', { places })
         })
@@ -18,9 +18,9 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         if (!req.body.image) {
-            req.body.image = undefined
+            req.body.image = 'http://placekitten.com/400x400'
         }
-        await db.Place.create(req.body)
+        await Place.create(req.body)
         res.redirect('/places')
     }
     catch (error) {
@@ -34,7 +34,7 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    db.Place.findById(req.params.id)
+    Place.findById(req.params.id)
         .then(place => {
             res.render('places/show', { place })
         })
