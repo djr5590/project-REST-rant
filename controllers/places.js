@@ -17,13 +17,22 @@ router.get('/', (req, res) => {
 // Create
 router.post('/', (req, res) => {
     Place.create(req.body)
-    .then(() => {
-        res.redirect('/places')
-    })
-    .catch(err => {
-        console.log('err', err)
-        res.render('error404')
-    })
+        .then(() => {
+            res.redirect('/places')
+        })
+        .catch(err => {
+            if (err && err.name == 'ValidationError') {
+                let message = 'Validation Error: '
+                for (var field in err.errors) {
+                    message += `${field} was ${err.errors[field].value}. `
+                    message += `${err.errors[field].message}`
+                }
+                console.log('Validation error message', message)
+                res.render('places/new', { message })
+            } else {
+                res.render('error404')
+            }
+        })
 })
 
 // New
