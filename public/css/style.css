@@ -1,3 +1,17 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+}
+
 h1 {
     text-align: center;
     color: cornflowerblue;
@@ -8,9 +22,17 @@ h2 {
     color: lightblue;
 }
 
+a > h3 {
+    color: lightblue;
+}
+
+a > h3:hover {
+ color: rgb(78, 211, 245)
+}
+
 img {
-    text-align: center;
-    height: 300px;
+    height: 350px;
+    border-radius: 10px;
 }
 
 p {
@@ -21,6 +43,12 @@ p {
 nav {
     background-color: cornflowerblue;
     padding: 10px;
+}
+
+footer {
+    background-color: cornflowerblue;
+    margin-top: auto;
+    height: 100px;
 }
 
 nav ul {
@@ -43,17 +71,11 @@ nav a:hover {
     text-decoration: none;
 }
 
-body {
-    background-color: lightblue;
-    text-align: center;
+a > h2:hover{
+    color: rgb(252, 204, 132);
+    text-decoration: none;
 }
 
-main {
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: white;
+.bg-gray {
+background-color: rgba(241, 248, 248, 0.815);
 }
-
-/* img {
-
-} */

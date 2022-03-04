@@ -31,5 +31,8 @@ mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true
 }).then(() => console.log('db connected')).catch(err => console.log(err))
 
+// step 4 part 10 
+// module.exports.Place = require('../places')
+// module.exports.Comment = require('../comment')
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`))
