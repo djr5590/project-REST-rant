@@ -75,6 +75,6 @@ Dependencies - express-react
 
 |         Colors         |
 |        --------        |
-| CornFlowerBlue #2F4F4F |
-| LightBlue      #7FFFD4 |
-| Pink           #FFF8DC |
+| CornFlowerBlue #6495ED |
+| LightBlue      #ADD8E6 |
+| Pink           #FFC0CB |
