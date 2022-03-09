@@ -11,7 +11,7 @@ function index(data) {
                 <p key={data.index} className="text-center">
                     {place.cuisines}
                 </p>
-                <center><img src={place.pic} alt={place.name}></img></center>
+                <img src={place.pic} alt={place.name}></img>
                 <p className='text-center'>
                     Located in {place.city}, {place.state}
                 </p>
