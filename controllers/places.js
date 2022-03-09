@@ -45,18 +45,17 @@ router.get('/new', (req, res) => {
 })
 
 // Show
-router.get('/:id', async (req, res) => {
-    try {
-        const place = await db.Place.findById(req.params.id)
-            .populate('comments')
-        res.render('places/show', { place: place })
-        console.log(place.comments)
-        res.render('places/show', { place })
-    } catch (err) {
-        console.error('err', err)
-        res.render('error404')
-    }
-})
+router.get("/:id", (req, res) => {
+    db.Place.findById(req.params.id)
+      .populate("comments")
+      .then((place) => {
+        res.render("places/show", { place })
+      })
+      .catch((err) => {
+        console.log("err", err)
+        res.render("error404")
+      })
+  })
 
 // Update
 router.put("/:id", (req, res) => {

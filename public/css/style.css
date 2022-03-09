@@ -31,7 +31,8 @@ a > h3:hover {
 }
 
 img {
-    height: 350px;
+    height: 20rem;
+    width: 25rem;
     border-radius: 10px;
 }
 

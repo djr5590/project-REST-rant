@@ -73,8 +73,8 @@ Dependencies - express-react
 
 ### Color Scheme
 
-|        Colors         |
-|       --------        |
-| DarkSlateGray #2F4F4F |
-| Aquamarine    #7FFFD4 |
-| Cornsilk      #FFF8DC |
+|         Colors         |
+|        --------        |
+| CornFlowerBlue #2F4F4F |
+| LightBlue      #7FFFD4 |
+| Pink           #FFF8DC |

@@ -7,17 +7,21 @@ const methodOverride = require('method-override')
 const app = express()
 const PORT = process.env.PORT || 5000
 
-const placesRoutes = require('./controllers/places')
-
-
+// View Engine
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+
+// Middleware
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
+// Places Route
+const placesRoutes = require('./controllers/places')
 app.use('/places', placesRoutes)
+
+
 
 app.get('/', (req, res) => {
     res.render('home')
@@ -38,4 +42,5 @@ mongoose.connect(process.env.MONGO_URI, {
 // module.exports.Place = require('../places')
 // module.exports.Comment = require('../comment')
 
+// Listen
 app.listen(PORT, () => console.log(`listening on port ${PORT}`))
