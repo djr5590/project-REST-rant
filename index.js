@@ -1,10 +1,13 @@
+// Dependencies
 require('dotenv').config()
 const express = require('express')
+const methodOverride = require('method-override')
+
+// Configuration
 const app = express()
 const PORT = process.env.PORT || 5000
 
 const placesRoutes = require('./controllers/places')
-const methodOverride = require('method-override')
 
 
 app.set('views', __dirname + '/views')
